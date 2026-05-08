@@ -1,6 +1,6 @@
 obj-m += rustguess.o
 
-KDIR := /lib/modules/7.0.0-14-generic/build
+KDIR := /lib/modules/$(shell uname -r)/build
 
 all:
 	make -C $(KDIR) M=$(PWD) modules
